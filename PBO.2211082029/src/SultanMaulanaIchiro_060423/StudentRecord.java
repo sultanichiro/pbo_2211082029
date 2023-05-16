@@ -2,13 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package SultanMaulanaIchiro_050423;
+package SultanMaulanaIchiro_060423;
 
 /**
  *
- * @author 
+ * @author maita
  */
 public class StudentRecord {
+    
+    static int nilai;
     private String name; 
     private String address; 
     private int age; 
@@ -19,6 +21,27 @@ public class StudentRecord {
         //area penulisan kode selanjutnya
     
     private static int studentCount;
+    public StudentRecord(){
+       //area penulisan kode
+       studentCount++; //menambah student 
+    }
+    
+    public StudentRecord(String temp){ 
+        this.name = temp;
+        studentCount++; //menambah student 
+    } 
+    
+    public StudentRecord(String name, String address){ 
+        this.name = name; 
+        this.address = address; 
+        studentCount++; //menambah student 
+    } 
+    
+    public StudentRecord(double mGrade, double eGrade, double sGrade){ 
+    mathGrade = mGrade; 
+    englishGrade = eGrade; 
+    scienceGrade = sGrade; 
+    } 
     
     public String getName(){
         return name;
@@ -78,9 +101,16 @@ public class StudentRecord {
     } 
     
     public void print(double eGrade, double mGrade, double sGrade){
+        /*
         System.out.println("Name:" + name); 
         System.out.println("Math Grade:" + mGrade); 
         System.out.println("English Grade:" + eGrade); 
         System.out.println("Science Grade:" + sGrade); 
+        */
+        mathGrade = mGrade;
+        englishGrade = eGrade; 
+        scienceGrade = sGrade; 
+        studentCount++;
     }   
+
 }
